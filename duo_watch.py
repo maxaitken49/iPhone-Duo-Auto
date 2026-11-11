@@ -9,16 +9,16 @@ Setup:
 """
 import time, os, sys, json, requests
 
-CONFIG = {"MK2E4QN/A", "MK2D4QN/A"}
+CONFIG = {
     "ntfy_topic": os.environ.get("NTFY_TOPIC", "CHANGE-ME-to-something-unguessable"),
     "interval_seconds": 300,          # be polite; don't go below ~120
     # Apple part numbers: open the Duo's buy page, pick a model, view page source,
     # search for "MK" or "part" to find the code (e.g. MK2K4QL/A style).
     "apple": [
         {"label": "Apple UK (London)", "base": "https://www.apple.com/uk", "location": "SW12 9AA",
-         "parts": ["PART_NUMBER_HERE"]},
+         "parts": ["MK2E4QN/A", "MK2D4QN/A"]},
         {"label": "Apple US (Detroit)", "base": "https://www.apple.com", "location": "48226",
-         "parts": ["PART_NUMBER_HERE"]},
+         "parts": ["MK1F4LL/A", "MK1E4LL/A"]},
     ],
     # Best Buy: free API key at developer.bestbuy.com; SKU from the product page URL.
     "bestbuy": {"key": os.environ.get("BESTBUY_KEY", ""), "skus": ["SKU_HERE"], "zip": "48226", "radius_miles": 25},
