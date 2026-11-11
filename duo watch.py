@@ -9,7 +9,7 @@ Setup:
 """
 import time, os, sys, json, requests
 
-CONFIG = {
+CONFIG = ["MK2E4QN/A", "MK2D4QN/A"]
     "ntfy_topic": os.environ.get("NTFY_TOPIC", "CHANGE-ME-to-something-unguessable"),
     "interval_seconds": 300,          # be polite; don't go below ~120
     # Apple part numbers: open the Duo's buy page, pick a model, view page source,
